@@ -206,7 +206,7 @@ public class Client implements KeyListener {
         System.out.println("remaining data:"+printHexBinary(data));
         System.out.print("the data:"+new String(crypt.ChaCha(key, nonce, data)));*/
 
-        return crypt.ChaCha(key, crypt.getNonce(input), crypt.getData(input));
+        return crypt.encryptWithChaCha(key, crypt.getNonce(input), crypt.getData(input));
     }
 
     /**
